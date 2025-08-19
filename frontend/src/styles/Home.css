@@ -1,0 +1,132 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width:100%;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.home-container {
+  height: 100vh;
+  width:100vw;
+  background: linear-gradient(270deg, #00e5ff, #001122, #00c6ff);
+  background-size: 600% 600%;
+  animation: gradientBG 15s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+.menu-icon {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: #00ffff;
+  z-index: 10;
+}
+
+.sidebar {
+  position: fixed;
+  left: -240px;
+  top: 0;
+  width: 220px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  padding-top: 80px;
+  transition: 0.3s;
+  z-index: 9;
+}
+
+.sidebar.active { left: 0; }
+
+.sidebar a {
+  padding: 15px 20px;
+  text-decoration: none;
+  color: #00ffff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  transition: 0.2s;
+}
+
+.sidebar a:hover { color: #ffffff; }
+
+.glass-box {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 40px;
+  width: 80%;          
+  max-width: 1000px;   
+  backdrop-filter: blur(15px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+  border: 1px solid rgba(255,255,255,0.2);
+  text-align: center;
+  color: #e0ffff;
+  animation: slideIn 1.5s ease;
+}
+
+
+
+.logo {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 15px;
+  animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg);}
+  100% { transform: rotate(360deg);}
+}
+
+h1 { color: #00ffff; margin-bottom: 20px; }
+
+.clinic-info p {
+  line-height: 1.6;
+  font-size: 16px;
+  margin: 8px 0;
+  animation: float 4s ease-in-out infinite;
+}
+
+.clinic-info p:nth-child(1) { animation-delay: 0s; }
+.clinic-info p:nth-child(2) { animation-delay: 0.3s; }
+.clinic-info p:nth-child(3) { animation-delay: 0.6s; }
+.clinic-info p:nth-child(4) { animation-delay: 0.9s; }
+.clinic-info p:nth-child(5) { animation-delay: 1.2s; }
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0px); }
+}
+
+.home-links a {
+  display: inline-block;
+  margin: 15px 10px;
+  padding: 10px 25px;
+  background: linear-gradient(45deg, #00ffff, #00a3ff);
+  color: white;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.home-links a:hover {
+  background: linear-gradient(45deg, #00a3ff, #00e5ff);
+}
+
+@media screen and (max-width: 1200px) {
+  .glass-box { width: 90%; }
+}

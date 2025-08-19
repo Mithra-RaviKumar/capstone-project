@@ -1,0 +1,113 @@
+
+.user-page {
+  margin: 0;
+  font-family: 'Comic Neue', cursive, sans-serif;
+  background: linear-gradient(135deg, #00e5ff, #001f33);
+  color: white;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.user-container {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 30px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 450px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+.user-container h2 {
+  margin-bottom: 20px;
+  color: white;
+  text-shadow: 1px 1px 5px #00f0ff;
+}
+
+.user-container label {
+  font-weight: bold;
+  display: block;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.user-container input,
+.user-container select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+}
+
+.user-container input::placeholder {
+  color: #ddd;
+}
+
+.user-container button {
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: cyan;
+  color: #003344;
+  transition: all 0.3s ease;
+}
+
+.user-container button:hover {
+  background-color: #00bcd4;
+}
+.user-container .btn-alt {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+.user-container .btn-alt:hover {
+  background-color: #e63946;
+}
+
+
+table {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-dark th {
+  background-color: #111;
+  color: white;
+  padding: 12px;
+  text-align: left;
+}
+
+td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  color:black;
+}
+
+tr:nth-child(even) {
+  background-color: #f5fbff; 
+}
+
+tr:nth-child(odd) {
+  background-color: white;
+}
+
+@media screen and (max-width: 768px) {
+  table {
+    font-size: 13px;
+  }
+}

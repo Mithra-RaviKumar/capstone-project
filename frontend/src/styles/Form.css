@@ -1,0 +1,114 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Comic Neue', cursive;
+}
+
+.form-container {
+  background: rgba(255,255,255,0.1);
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 400px;
+  width: 90%;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  border: 1px solid rgba(255,255,255,0.2);
+  text-align: center;
+  margin: auto;
+  position: absolute;
+  top:250px;  
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.form-container h1 {
+  color: #00ffff;
+  margin-bottom: 20px;
+}
+
+.form-container input, .form-container select {
+  display: block;
+  width: 90%;
+  margin: 10px auto;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #00ffff;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+}
+
+.form-container input::placeholder,
+.form-container select {
+  color: #ddd;
+}
+
+.form-container button {
+  background: #00ffff;
+  border: none;
+  color: #000;
+  font-weight: bold;
+  padding: 12px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 50%;
+  transition: 0.3s;
+}
+
+.form-container button:hover {
+  background: #00aacc;
+  color: #fff;
+}
+
+.menu-icon {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: #00ffff;
+  z-index: 10;
+}
+
+.sidebar {
+  position: fixed;
+  left: -240px;
+  top: 0;
+  width: 220px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  padding-top: 80px;
+  transition: 0.3s;
+  z-index: 9;
+}
+
+.sidebar.active { left: 0; }
+
+.sidebar a {
+  padding: 15px 20px;
+  text-decoration: none;
+  color: #00ffff;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  transition: 0.2s;
+}
+
+.sidebar a:hover {
+  color: #ffffff;
+}
+
+body {
+  background: linear-gradient(270deg, #00e5ff, #0a1a2a);
+  background-size: 600% 600%;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% {background-position:0% 50%;}
+  50% {background-position:100% 50%;}
+  100% {background-position:0% 50%;}
+}

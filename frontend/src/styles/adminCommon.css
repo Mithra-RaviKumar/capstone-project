@@ -1,0 +1,100 @@
+
+.admin-page {
+  margin: 0;
+  font-family: 'Comic Neue', cursive, sans-serif;
+  background: linear-gradient(135deg, #00e5ff, #001f33);
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.admin-container {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 25px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 800px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.admin-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: cyan;
+  text-shadow: 1px 1px 5px #00f0ff;
+}
+
+.admin-container label {
+  font-weight: bold;
+}
+
+.admin-container input,
+.admin-container select {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0 15px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+}
+
+.admin-container input::placeholder {
+  color: #ddd;
+}
+
+.admin-container button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.admin-container .btn-primary {
+  background-color: cyan;
+  color: #003344;
+}
+
+.admin-container .btn-primary:hover {
+  background-color: #00bcd4;
+}
+
+.admin-container .btn-danger {
+  background-color: red;
+  color: white;
+}
+
+.admin-container .btn-danger:hover {
+  background-color: darkred;
+}
+
+.admin-container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.admin-container th,
+.admin-container td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.admin-container th {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.logout-btn {
+  background-color: red;
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+}
