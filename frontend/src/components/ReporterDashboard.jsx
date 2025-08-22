@@ -13,7 +13,7 @@ const [sidebarOpen, setSidebarOpen] = useState(false);
   const handleLogin = (e) => {
     e.preventDefault();
 
-    if (userId === "re-001" && password === "re-001") {
+    if (userId === "RE-001" && password === "RE-001") {
       navigate("/reporter");
     } else {
       alert("Invalid User ID or Password");
