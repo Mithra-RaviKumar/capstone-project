@@ -12,14 +12,14 @@ const AddPatient = () => {
 
   
   useEffect(() => {
-    axios.get("http://localhost:5000/api/patients/next-id")
+    axios.get("https://backend-ze0w.onrender.com/api/patients/next-id")
       .then(res => setPatientID(res.data.patientID))
       .catch(err => console.error("Error fetching next Patient ID", err));
   }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post("http://localhost:5000/api/patients", {
+    axios.post("https://backend-ze0w.onrender.com/api/patients", {
       patientID,
       name,
       age,
@@ -30,7 +30,7 @@ const AddPatient = () => {
       setMessage(res.data.message);
       setName(""); setAge(""); setGender(""); setContact("");
       
-      return axios.get("http://localhost:5000/api/patients/next-id");
+      return axios.get("https://backend-ze0w.onrender.com/api/patients/next-id");
     })
     .then(res => setPatientID(res.data.patientID))
     .catch(err => setMessage(err.response?.data?.error || "Error adding patient"));

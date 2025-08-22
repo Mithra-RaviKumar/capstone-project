@@ -11,7 +11,7 @@ const ViewPatientAppointments = () => {
   
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/patients")
+      .get("https://backend-ze0w.onrender.com/api/patients")
       .then((res) => setPatients(res.data))
       .catch((err) => console.error("Error fetching patients", err));
   }, []);
@@ -24,7 +24,7 @@ const ViewPatientAppointments = () => {
     }
 
     axios
-      .get(`http://localhost:5000/api/patients/appointments/patients/${selectedPatientID}`)
+      .get(`https://backend-ze0w.onrender.com/api/patients/appointments/patients/${selectedPatientID}`)
       .then((res) => {
         setAppointments(res.data);
         if (res.data.length === 0) setMessage("No appointments found for this patient.");

@@ -14,7 +14,7 @@ const AddDoctor = () => {
   useEffect(() => {
     const fetchNextID = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/doctors/nextID");
+        const res = await axios.get("https://backend-ze0w.onrender.com/api/doctors/nextID");
         setDoctorID(res.data.doctorID);
       } catch (err) {
         console.error("Error fetching next doctor ID", err);
@@ -27,7 +27,7 @@ const AddDoctor = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/api/doctors", {
+      const res = await axios.post("https://backend-ze0w.onrender.com/api/doctors", {
         name,
         specialization,
         phone,
@@ -38,7 +38,7 @@ const AddDoctor = () => {
       setSpecialization("");
       setPhone("");
 
-      const newIDRes = await axios.get("http://localhost:5000/api/doctors/nextID");
+      const newIDRes = await axios.get("https://backend-ze0w.onrender.com/api/doctors/nextID");
       setDoctorID(newIDRes.data.doctorID);
     } catch (err) {
       console.error(err);

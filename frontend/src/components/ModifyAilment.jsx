@@ -12,7 +12,7 @@ const ModifyAilment = () => {
     if (!patientID) return;
 
     axios
-      .get(`http://localhost:5000/api/patients/ailment/${patientID}`)
+      .get(`https://backend-ze0w.onrender.com/api/patients/ailment/${patientID}`)
       .then((res) => {
         setAilments(res.data.ailments.join(", "));
       })
@@ -25,7 +25,7 @@ const ModifyAilment = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.put(`http://localhost:5000/api/patients/ailment/${patientID}`, {
+      const res = await axios.put(`https://backend-ze0w.onrender.com/api/patients/ailment/${patientID}`, {
         ailments: ailments.split(",").map((a) => a.trim()),
       });
       setMessage(res.data.message);

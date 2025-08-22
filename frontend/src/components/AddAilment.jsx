@@ -10,7 +10,7 @@ const AddAilment = () => {
 
   
   useEffect(() => {
-    axios.get("http://localhost:5000/api/patients")
+    axios.get("https://backend-ze0w.onrender.com/api/patients")
       .then(res => setPatients(res.data))
       .catch(err => console.error("Error fetching patients", err));
   }, []);
@@ -23,7 +23,7 @@ const AddAilment = () => {
     }
 
     try {
-      const res = await axios.post("http://localhost:5000/api/patients/ailment", {
+      const res = await axios.post("https://backend-ze0w.onrender.com/api/patients/ailment", {
         patientID,
         ailments: ailments.split(",").map(a => a.trim())
       });

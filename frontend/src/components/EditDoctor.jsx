@@ -11,7 +11,7 @@ function EditDoctor() {
 
   const fetchDoctor = () => {
     axios
-      .get(`http://localhost:5000/api/doctors/doctorid/${doctorID}`)
+      .get(`https://backend-ze0w.onrender.com/api/doctors/doctorid/${doctorID}`)
       .then((res) => {
         if (res.data) {
           setName(res.data.name);
@@ -30,7 +30,7 @@ function EditDoctor() {
 
   const updateDoctor = () => {
     axios
-      .put(`http://localhost:5000/api/doctors/doctorid/${doctorID}`, {
+      .put(`https://backend-ze0w.onrender.com/api/doctors/doctorid/${doctorID}`, {
         name,
         specialization,
         phone,

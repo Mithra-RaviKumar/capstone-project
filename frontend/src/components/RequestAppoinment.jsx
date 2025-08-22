@@ -12,7 +12,7 @@ const RequestAppointment = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/api/patients/appointments/request", {
+      const res = await axios.post("https://backend-ze0w.onrender.com/api/patients/appointments/request", {
         patientID,
         doctorID,
         date,

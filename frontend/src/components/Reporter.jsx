@@ -16,7 +16,7 @@ export default function Reporter() {
   
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/doctors")
+      .get("https://backend-ze0w.onrender.com/api/doctors")
       .then((res) => {
         
         if (Array.isArray(res.data)) {
@@ -30,7 +30,7 @@ export default function Reporter() {
       .catch((err) => console.error("Error fetching doctors:", err));
 
     axios
-      .get("http://localhost:5000/api/leaves")
+      .get("https://backend-ze0w.onrender.com/api/leaves")
       .then((res) => {
         if (Array.isArray(res.data)) {
           setLeaves(res.data);
@@ -52,7 +52,7 @@ export default function Reporter() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/api/leaves", {
+      await axios.post("https://backend-ze0w.onrender.com/api/leaves", {
         doctorID: formData.doctorID,
         startDate: formData.startDate,
         endDate: formData.endDate,
@@ -60,7 +60,7 @@ export default function Reporter() {
       });
       alert("Leave added successfully!");
       setFormData({ doctorID: "", startDate: "", endDate: "", reason: "" });
-      const refreshed = await axios.get("http://localhost:5000/api/leaves");
+      const refreshed = await axios.get("https://backend-ze0w.onrender.com/api/leaves");
       setLeaves(Array.isArray(refreshed.data) ? refreshed.data : refreshed.data.leaves || []);
     } catch (err) {
       console.error("Error adding leave:", err.response?.data || err.message);

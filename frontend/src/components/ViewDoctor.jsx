@@ -8,7 +8,7 @@ function ViewDoctor() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/doctors")
+      .get("https://backend-ze0w.onrender.com/api/doctors")
       .then((res) => {
         setDoctors(res.data);
       })

@@ -11,7 +11,7 @@ const ViewDoctorAppointments = () => {
  
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/doctors")
+      .get("https://backend-ze0w.onrender.com/api/doctors")
       .then((res) => setDoctors(res.data))
       .catch((err) => console.error("Error fetching doctors", err));
   }, []);
@@ -24,7 +24,7 @@ useEffect(() => {
   }
 
   axios
-    .get(`http://localhost:5000/api/patients/appointments/doctors/${selectedDoctorID}`)
+    .get(`https://backend-ze0w.onrender.com/api/patients/appointments/doctors/${selectedDoctorID}`)
     .then((res) => {
       if (Array.isArray(res.data) && res.data.length > 0) {
         setAppointments(res.data);

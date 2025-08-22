@@ -14,7 +14,7 @@ export default function DeleteDoctor() {
     }
 
     try {
-      const res = await axios.delete(`http://localhost:5000/api/doctors/${doctorID}`);
+      const res = await axios.delete(`https://backend-ze0w.onrender.com/api/doctors/${doctorID}`);
       setMessage(res.data.message);
     } catch (err) {
       setMessage(err.response?.data?.message || "Error deleting doctor");

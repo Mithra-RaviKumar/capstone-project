@@ -20,7 +20,7 @@ export default function SuggestDoctor() {
   const handleClick = async (ailment) => {
     setSelectedAilment(ailment);
     try {
-      const res = await axios.get(`http://localhost:5000/api/doctors/suggest/${ailment}`);
+      const res = await axios.get(`https://backend-ze0w.onrender.com/api/doctors/suggest/${ailment}`);
       setDoctors(res.data);
     } catch (err) {
       console.error(err);
